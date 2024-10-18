@@ -45,13 +45,13 @@ env:
   AZURE_CONTAINER_REGISTRY: skdemoacr
   CONTAINER_NAME: samples/contoso-website
   CLUSTER_RESOURCE_GROUP: skimrg
-  CLUSTER_NAME: skauto
+  CLUSTER_NAME: suminaks
   DOCKER_FILE: Dockerfile
   BUILD_CONTEXT_PATH: ./
   CHART_PATH: .
   CHART_OVERRIDE_PATH: ./values.yaml
-  CHART_OVERRIDES: image.repository=skdemoacr.azurecr.io/samples/contoso-website,image.tag=${{ github.sha }}
-  NAMESPACE: namespace-workflow-1729105383108
+  CHART_OVERRIDES: image.repository=skdemoacr.azurecr.io/samples/contoso-website,image.tag=${{ github.sha }},k1=v1
+  NAMESPACE: namespace-workflow-1729287427594
 
 jobs:
   buildImage:
